@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with FoodHut landing page.">
     <meta name="author" content="Devcrud">
+    
     <title>FoodHub</title>
    
     <!-- font icons -->
@@ -25,16 +26,31 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">Iniciar Sesion</a>
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        iniciar secion
+                     </button>
+                     <div class="dropdown-menu form">
+                        <form class="px-4 py-3">
+                           <div class="form-group">
+                              <input type="nombre de usuario" class="form-control" id="exampleDropdownFormEmail1" placeholder="nombre">
+                           </div>
+                           <div class="form-group">
+                              <input type="contraseña" class="form-control" id="exampleDropdownFormPassword1" placeholder="contraseña">
+                           </div>
+                           <button type="submit" class="btn btn-primary btn-block">Iniciar secion</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><small>Eres nuevo por aqui, crea un usuario</small></a>
+                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">Recetas</a>
+                    <a class="nav-link" href="recetas.html">Recetas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#gallary">Administrador</a>
+                    <a class="nav-link" href="administrador.html">Administrador</a>
                 </li>
             </ul>
-            <a class="navbar-brand m-auto" href="#">
+            <a class="navbar-brand m-auto" href="index.html">
                 <img src="assets/imgs/logo.svg" class="brand-img" alt="">
                 <span class="brand-txt">Food Hub</span>
             </a>
