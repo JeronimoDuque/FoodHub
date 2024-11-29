@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,13 +39,13 @@
                      </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recetas.html">Recetas</a>
+                    <a class="nav-link" href="recetas.jsp">Recetas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="administrador.html">Administrador</a>
+                    <a class="nav-link" href="administrador.jsp">Administrador</a>
                 </li>
             </ul>
-            <a class="navbar-brand m-auto" href="index.html">
+            <a class="navbar-brand m-auto" href="index.jsp">
                 <img src="assets/imgs/logo.svg" class="brand-img" alt="">
                 <span class="brand-txt">Food Hub</span>
             </a>
@@ -79,19 +80,22 @@
                     Ingredientes
                 </th>
             </tr>
+            <%
+                List<Receta> ListaRecetas = (List) request.getSession().getAtribute("listaRecetas");
+                for(Receta res : ListaRecetas){
+            %>
             <tr>
                 <th>
-                    Lorem 
+                    <%=res.getNombre()%>
                 </th>
                 <th>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis consequatur dolorum
+                    <%=res.getDescripcion()%>
                 </th>
                 <th>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iste ipsa,
-                    voluptate dolorum dolorem, delectus labore laboriosam ab earum sapiente maxime ipsam doloremque!
-                    Architecto sit labore iusto eius consequuntur ad.
+                    <%=res.getIngedientes()%>
                 </th>
-            </tr>
+            </tr>                
+            <%}%>
         </table>
     </div>
     <div class="col-md-6">

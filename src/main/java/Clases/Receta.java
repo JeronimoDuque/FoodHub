@@ -1,3 +1,5 @@
+package Clases;
+
 public class Receta {
     private int id;
     private String Nombre;

@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,17 +35,17 @@
                            <button type="submit" class="btn btn-primary btn-block">Iniciar secion</button>
                         </form>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><small>Eres nuevo por aqui, crea un usuario</small></a>
+                        <a class="dropdown-item" href="crear usuario.jsp"><small>Eres nuevo por aqui, crea un usuario</small></a>
                      </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recetas.html">Recetas</a>
+                    <a class="nav-link" href="recetas.jsp">Recetas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="administrador.html">Administrador</a>
+                    <a class="nav-link" href="administrador.jsp">Administrador</a>
                 </li>
             </ul>
-            <a class="navbar-brand m-auto" href="index.html">
+            <a class="navbar-brand m-auto" href="index.jsp">
                 <img src="assets/imgs/logo.svg" class="brand-img" alt="">
                 <span class="brand-txt">Food Hub</span>
             </a>
