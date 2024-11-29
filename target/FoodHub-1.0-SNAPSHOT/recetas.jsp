@@ -1,3 +1,5 @@
+<%@page import= "java.util.List" %>
+<%@page import= "Clases.Receta" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +83,7 @@
                 </th>
             </tr>
             <%
-                List<Receta> ListaRecetas = (List) request.getSession().getAtribute("listaRecetas");
+                List<Receta> ListaRecetas = (List) request.getSession().getAttribute("listaRecetas");
                 for(Receta res : ListaRecetas){
             %>
             <tr>
@@ -92,7 +94,7 @@
                     <%=res.getDescripcion()%>
                 </th>
                 <th>
-                    <%=res.getIngedientes()%>
+                    <%=res.getIngredientes()%>
                 </th>
             </tr>                
             <%}%>
