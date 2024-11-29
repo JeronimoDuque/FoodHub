@@ -6,11 +6,17 @@ package Sevlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import Clases.Receta;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -30,7 +36,7 @@ public class SvReceta extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    }
+        }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -44,7 +50,12 @@ public class SvReceta extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        List<Receta> listaRecetas = new ArrayList<>();
+
+        HttpSession miSecion = request.getSession();
+        miSecion.setAttribute("listaRecetas", listaRecetas);
+
+        response.sendRedirect("recetas.jsp");
     }
 
     /**
@@ -58,7 +69,9 @@ public class SvReceta extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            String nombre =  request.getParameter("nombre");
+            String descripcion = request.getParameter("descripcion");
+            String ingredientes = request.getParameter("ingredientes");
     }
 
     /**
