@@ -17,8 +17,10 @@ public class ControladoraPersistencia {
     public void crearReceta (Receta res){
         resJpa.create(res);
     }
-
+}
+/*
     public List<Receta> traerUsuarios(){
         return resJpa.findRecetaEntities();
     }
 }
+*/

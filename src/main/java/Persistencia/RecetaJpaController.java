@@ -46,7 +46,8 @@ public class RecetaJpaController implements Serializable {
             }
         }
     }
-
+}
+/*
     public void edit(Receta receta) throws NonexistentEntityException,Exception{
         EntityManager em = null;
         try {
@@ -70,3 +71,4 @@ public class RecetaJpaController implements Serializable {
     }
 
 }
+*/

@@ -45,7 +45,7 @@
                      </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recetas.jsp">Recetas</a>
+                    <a class="nav-link" href="recetas.html">Recetas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="administrador.jsp">Administrador</a>

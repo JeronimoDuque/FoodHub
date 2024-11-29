@@ -1,12 +1,13 @@
 package Clases;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 @Entity
-public class Receta {
+public class Receta implements Serializable {
     
     @Id
     @GeneratedValue (strategy=GenerationType.AUTO)
