@@ -54,7 +54,7 @@ public class SvReceta extends HttpServlet {
             throws ServletException, IOException {
         List<Receta> listaRecetas = new ArrayList<>();
 
-        
+
         HttpSession miSecion = request.getSession();
         miSecion.setAttribute("listaRecetas", listaRecetas);
 
@@ -83,6 +83,7 @@ public class SvReceta extends HttpServlet {
             res.setIngredientes(ingredientes);
 
             control.crearReceta(res);
+            System.out.println("conexion hecha");
     }
 
     /**

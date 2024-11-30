@@ -69,7 +69,7 @@
     </header>
     <div class="row mt-5">
         <div class="col-md-6">
-            <form action="/SvReceta.java" method="post">
+            <form action="SvReceta.java" method="post">
 <!--
             <div class="form-group">
                 ID
@@ -78,15 +78,15 @@
 -->
             <div class="form-group">
                 Nombre
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
             </div>
             <div class="form-group">
                 Descripcion
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Description">
+                <input type="text" class="form-control" id="descripcion" placeholder="Description">
             </div>
             <div class="form-group">
                 Ingredientes
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingredientes">
+                <input type="text" class="form-control" id="ingredient" placeholder="Ingredientes">
             </div>
 <!--
             <div class="form-group">
