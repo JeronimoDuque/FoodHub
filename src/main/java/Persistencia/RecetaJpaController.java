@@ -6,9 +6,11 @@ package Persistencia;
 
 import java.io.Serializable;
 import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import Clases.Receta;
 import Persistencia.exceptions.NonexistentEntityException;
@@ -46,8 +48,7 @@ public class RecetaJpaController implements Serializable {
             }
         }
     }
-}
-/*
+
     public void edit(Receta receta) throws NonexistentEntityException,Exception{
         EntityManager em = null;
         try {
@@ -70,5 +71,36 @@ public class RecetaJpaController implements Serializable {
         }
     }
 
+    public void destroy(int id){
+
+    }
+
+    public List<Receta> findRecetaEntities() {
+        return findRecetaEntities(true, -1, -1);
+    }
+
+    private List<Receta> findRecetaEntities(boolean all, int maxResults, int firstResult) {
+        EntityManager em = getEntityManager();
+        try {
+            Query query = em.createQuery("SELECT r FROM Receta r");
+            if (!all) {
+                query.setMaxResults(maxResults);
+                query.setFirstResult(firstResult);
+            }
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+
+    public Receta findReceta(int id) {
+        EntityManager em = getEntityManager();
+        try {
+            return em.find(Receta.class, id);
+        } finally {
+            em.close();
+        }
+    }
+
 }
-*/

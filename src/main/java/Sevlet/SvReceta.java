@@ -5,11 +5,8 @@
 package Sevlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
-
-import Clases.Receta;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,12 +15,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import Clases.Receta;
+import Controladoras.ControlReceta;
+
 /**
  *
  * @author Duque
  */
 @WebServlet(name = "SvReceta", urlPatterns = {"/SvReceta"})
 public class SvReceta extends HttpServlet {
+
+    ControlReceta control  = new ControlReceta();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -52,6 +54,7 @@ public class SvReceta extends HttpServlet {
             throws ServletException, IOException {
         List<Receta> listaRecetas = new ArrayList<>();
 
+        
         HttpSession miSecion = request.getSession();
         miSecion.setAttribute("listaRecetas", listaRecetas);
 
@@ -72,6 +75,14 @@ public class SvReceta extends HttpServlet {
             String nombre =  request.getParameter("nombre");
             String descripcion = request.getParameter("descripcion");
             String ingredientes = request.getParameter("ingredientes");
+
+            Receta res = new Receta();
+
+            res.setNombre(nombre);
+            res.setDescripcion(descripcion);
+            res.setIngredientes(ingredientes);
+
+            control.crearReceta(res);
     }
 
     /**

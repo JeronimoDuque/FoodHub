@@ -8,4 +8,13 @@
             30
         </session-timeout>
     </session-config>
+    <servlet>
+        <servlet-name>SvReceta</servlet-name>
+        <servlet-class>FoodHub.SvReceta</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SvReceta</servlet-name>
+        <url-pattern>/SvReceta</url-pattern>
+    </servlet-mapping>
+
 </web-app>

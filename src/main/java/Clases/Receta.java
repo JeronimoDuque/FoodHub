@@ -1,10 +1,11 @@
 package Clases;
 
 import java.io.Serializable;
+
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Receta implements Serializable {
@@ -16,6 +17,9 @@ public class Receta implements Serializable {
     private String Descripcion;
     private String Ingredientes;
 
+
+    public Receta() {
+    }
 
     public Receta(int id, String Nombre, String Descripcion, String Ingredientes) {
         this.id = id;

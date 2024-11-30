@@ -69,11 +69,13 @@
     </header>
     <div class="row mt-5">
         <div class="col-md-6">
-            <form action="administrar recetas.java" method="post">
+            <form action="/SvReceta.java" method="post">
+<!--
             <div class="form-group">
                 ID
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ID">
             </div>
+-->
             <div class="form-group">
                 Nombre
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
@@ -86,6 +88,7 @@
                 Ingredientes
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingredientes">
             </div>
+<!--
             <div class="form-group">
                 <select class="form-control" id="exampleFormControlSelect1">
                    <option>Crear receta</option>
@@ -93,6 +96,7 @@
                    <option>Borrar receta</option>
                 </select>
              </div>
+-->
             <button class="btn btn-primary" type="submit">crear usuario</button>
         </form>
         </div>
